@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4406611006891394898}
   m_LocalRotation: {x: -0, y: -0, z: 0.028207501, w: 0.9996021}
-  m_LocalPosition: {x: -0.14356446, y: 0.38764006, z: 0}
+  m_LocalPosition: {x: 1.03, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464080489835373634}
   m_LocalRotation: {x: -0, y: -0, z: 0.028207501, w: 0.9996021}
-  m_LocalPosition: {x: 0.085371494, y: -0.22542521, z: 0}
+  m_LocalPosition: {x: 1.2589359, y: -1.0230653, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,8 +177,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891131845830721113}
+  - component: {fileID: 2626079863303452771}
   - component: {fileID: 4843922228324210028}
   - component: {fileID: 7520765847320078012}
+  - component: {fileID: 710484851}
   m_Layer: 0
   m_Name: Kevin Upheaval
   m_TagString: Untagged
@@ -203,6 +205,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2626079863303452771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891131845830721093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c38ee02add0b4cb9be66529de970dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 10
 --- !u!70 &4843922228324210028
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -216,7 +231,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: -0.71}
+  m_Offset: {x: 1.32, y: -1.45}
   m_Size: {x: 2.92, y: 0.21}
   m_Direction: 1
 --- !u!50 &7520765847320078012
@@ -238,5 +253,21 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &710484851
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891131845830721093}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.61, y: 0.07}
+  serializedVersion: 2
+  m_Radius: 0.29
