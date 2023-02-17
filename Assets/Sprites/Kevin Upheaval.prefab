@@ -177,13 +177,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891131845830721113}
+  - component: {fileID: 1704971724380559845}
   - component: {fileID: 2626079863303452771}
   - component: {fileID: 4843922228324210028}
   - component: {fileID: 7520765847320078012}
   - component: {fileID: 710484851}
   m_Layer: 0
   m_Name: Kevin Upheaval
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +206,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704971724380559845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891131845830721093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86572ac3b08801c8a0b07590994e6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2626079863303452771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c38ee02add0b4cb9be66529de970dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torqueAmount: 10
+  torqueAmount: 15
 --- !u!70 &4843922228324210028
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -247,8 +260,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 0.5
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
