@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
+    [SerializeField] ParticleSystem deathEffect;
+
     [SerializeField] float timeTillDeath = 0.5f;
    private void OnTriggerEnter2D(Collider2D other) {
     if(other.tag == "Ground")
         {
+            deathEffect.Play();
             Invoke("loadScene", timeTillDeath);
         }
     }
