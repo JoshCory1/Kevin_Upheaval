@@ -11,6 +11,7 @@ public class FinshLine : MonoBehaviour
         if(other.tag == "Player")
         {
             winEffect.Play();
+            GetComponent<AudioSource>().Play();
             Invoke("loadScene", timeTillWin);
         }
     }

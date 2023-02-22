@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8751603528554747862}
   - component: {fileID: 8751603528554747860}
   - component: {fileID: 8751603528554747863}
+  - component: {fileID: 1550646939}
   m_Layer: 0
   m_Name: FineshLine
   m_TagString: Untagged
@@ -75,7 +76,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9142c5d64adfd84bc9b61f5233cc6085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTillWin: 0.5
+  winEffect: {fileID: 1025247765096287193}
+  timeTillWin: 2
+--- !u!82 &1550646939
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751603528554747857}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2995fdfca4594f6cf9476afb1f995e9b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.552
+  m_Pitch: 0.83
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8751603528941670902
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +435,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1890691984411669500, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
       propertyPath: m_Name
-      value: Particle System
+      value: Particle Finsh
       objectReference: {fileID: 0}
     - target: {fileID: 4384666816300921779, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
       propertyPath: m_RootOrder
@@ -384,12 +482,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968052705576026482, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968052705576026482, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 9147395558309353786, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
       propertyPath: lengthInSec
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147395558309353786, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9147395558309353786, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
       propertyPath: NoiseModule.enabled
@@ -465,6 +571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
+--- !u!198 &1025247765096287193 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9147395558309353786, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}
+  m_PrefabInstance: {fileID: 8126880366281626339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5481177200593936720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4384666816300921779, guid: 89468349a851c51e2bfbb17317b923ad, type: 3}

@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class CrashDetector : MonoBehaviour
 {
     [SerializeField] ParticleSystem deathEffect;
-
+    [SerializeField] AudioClip boomSFX;
     [SerializeField] float timeTillDeath = 0.5f;
    private void OnTriggerEnter2D(Collider2D other) {
     if(other.tag == "Ground")
         {
             deathEffect.Play();
+            GetComponent<AudioSource>().PlayOneShot(boomSFX);
             Invoke("loadScene", timeTillDeath);
         }
     }
