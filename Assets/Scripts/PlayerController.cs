@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float torqueAmount = 1;
     [SerializeField] float moveSpeed = 30f;
     [SerializeField] float boostSpeed = 15f;
+    bool canMove = true;
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
     // Start is called before the first frame update
@@ -20,8 +21,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotatePlayer();
-        RespondToBoost();
+        if(canMove)
+        {
+            RotatePlayer();
+            RespondToBoost();
+        }
+    }
+    public void DisableContorls()
+    {
+        canMove = false;
     }
 
     private void RespondToBoost()
